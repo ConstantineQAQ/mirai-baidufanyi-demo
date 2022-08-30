@@ -10,15 +10,15 @@ public final class Plugin extends JavaPlugin {
     public static final Plugin INSTANCE = new Plugin();
 
     private Plugin() {
-        super(new JvmPluginDescriptionBuilder("org.example.plugin", "1.0-SNAPSHOT")
-                .name("baidufanti")
+        super(new JvmPluginDescriptionBuilder("org.example.plugin.baidufanyi", "1.0-SNAPSHOT")
+                .name("baidufanyi")
                 .author("Constantine")
                 .build());
     }
 
     @Override
     public void onEnable() {
-        getLogger().info("Plugin loaded!");
+        getLogger().info("百度翻译插件已上线");
         GlobalEventChannel.INSTANCE.registerListenerHost(new translate());
     }
 }
